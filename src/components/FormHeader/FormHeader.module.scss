@@ -1,0 +1,22 @@
+.formHeader{
+    display: block;
+}
+
+.formTitle {
+  font-family: "Inter", sans-serif; /* Added font-family fallback */
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 43.57px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+  margin: 0px;
+}
+
+.formDescription {
+  font-family: "Inter", sans-serif; /* Added font-family fallback */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  text-align: left;
+  color: rgba(81, 81, 81, 1);
+}

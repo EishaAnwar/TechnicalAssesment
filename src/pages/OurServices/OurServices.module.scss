@@ -1,0 +1,39 @@
+.servicesContainer {
+  padding: 24px;
+  border-radius: 10px;
+  background: rgba(246, 251, 248, 1);
+  box-shadow: 0px 34px 44px -20px rgba(185, 206, 234, 0.25);
+  display: flex;
+  gap: 10px;
+}
+
+.service {
+  width: 377.67px;
+  padding: 24px;
+  gap: 24px;
+  border-radius: 10px;
+  box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.08);
+  display: flex;
+}
+.serviceDetails {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.serviceTitle {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.36px;
+  text-align: left;
+  color: rgba(248, 157, 33, 1);
+}
+
+.serviceDescription {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  text-align: left;
+  color: rgba(81, 81, 81, 1);
+}

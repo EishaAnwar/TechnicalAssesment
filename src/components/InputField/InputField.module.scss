@@ -1,0 +1,61 @@
+.formGroup {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-family: "Inter", sans-serif; /* Added font-family fallback */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  text-align: left;
+}
+
+.requiredAsterisk {
+  font-family: "Inter", sans-serif; /* Added font-family fallback */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  text-align: left;
+  color: red;
+}
+
+.formGroup input {
+  transition: border-color 0.3s ease;
+  padding: 16px;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(222, 230, 255, 1);
+  background-color: rgba(249, 250, 255, 1);
+  height: auto;
+  font-family: "Inter", sans-serif; /* Added font-family fallback */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  text-align: left;
+  color: rgba(170, 170, 170, 1);
+}
+
+.formGroup input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin: 0px;
+}
+
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+  .registrationSection {
+    padding: 20px;
+  }
+
+  .registrationSection h2 {
+    font-size: 20px;
+  }
+}

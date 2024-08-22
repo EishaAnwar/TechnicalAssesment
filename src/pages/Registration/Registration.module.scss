@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.assistantBot {
+  width: 489px;
+  height: 489px;
+  transform: scaleX(-1); 
+  transform-origin: center; 
+}
+
+.registration {
+  width: 505px;
+  height: 575px;
+}

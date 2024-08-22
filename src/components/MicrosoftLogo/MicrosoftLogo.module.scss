@@ -1,0 +1,30 @@
+.microsoftLogo {
+  display: grid;
+  grid-template-columns: repeat(2, 26.64px); /* Two columns */
+  grid-template-rows: repeat(2, 26.64px); /* Two rows */
+  gap: 1.57px; /* Gap between squares */
+  padding: 1.57px; /* Optional padding to center the logo within its container */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.logoSquare {
+  width: 26.64px; /* Width of each square */
+  height: 26.64px; /* Height of each square */
+  background: rgba(248, 157, 33, 0.6); /* Color of each square */
+}
+
+.topLeft {
+  grid-area: 1 / 1; /* First row, first column */
+}
+
+.topRight {
+  grid-area: 1 / 2; /* First row, second column */
+}
+
+.bottomLeft {
+  grid-area: 2 / 1; /* Second row, first column */
+}
+
+.bottomRight {
+  grid-area: 2 / 2; /* Second row, second column */
+}
