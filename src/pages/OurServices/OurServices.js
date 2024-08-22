@@ -5,7 +5,7 @@ import reviews from "../../assets/images/reviews.png";
 import awards from "../../assets/images/awards.png";
 
 const OurServices = () => {
-  const servicesList = [
+    const servicesList = [
     {
       id: 1,
       title: "24/7 Support",
@@ -28,11 +28,13 @@ const OurServices = () => {
       imageStyle: { width: "64px", height: "64px" },
     },
   ];
+
   return (
-    <div className={styles.servicesContainer}>
+    <div className={styles.servicesContainer} data-testid="our-services">
       {servicesList?.map((service) => (
+         // Iterate over the servicesList array and render each service 
         <div className={styles.service} key={service.id}>
-          <img src={service?.image} style={service?.imageStyle}/>
+          <img src={service?.image} style={service?.imageStyle} alt={service?.title} loading="lazy"/>
           <div className={styles.serviceDetails}>
             <div className={styles.serviceTitle}>{service?.title}</div>
             <div className={styles.serviceDescription}>

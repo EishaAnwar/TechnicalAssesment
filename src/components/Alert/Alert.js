@@ -1,15 +1,35 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./Alert.module.scss";
+import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 
-const Alert = ({ name }) => {
+const CustomAlert = ({ title, message, type = "success", onDismiss }) => {
   return (
-    <div style={styles.alertContainer}>
-      <h2 style={styles.title}>Registration</h2>
-      <p style={styles.message}>Hi {name}, thanks for registering. Somebody will contact you soon.</p>
+    <div className={styles.overlay} onClick={onDismiss}>
+      <div
+        className={styles.alertBox}
+        data-testid="alert-box"
+      >
+        <div className={styles.close}>
+          <ClearOutlinedIcon
+            onClick={onDismiss}
+            aria-label="close"
+            data-testid="close"
+            className={styles.closeIcon}
+            color="lightslategray"
+          />
+        </div>
+        <div className={`${styles.title} ${styles[type]}`}>{title}</div>
+        <p className={styles.message}>{message}</p>
+      </div>
     </div>
   );
-}
-export default Alert;
+};
+CustomAlert.propTypes = {
+  title: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+  onDismiss: PropTypes.func.isRequired,
+  type: PropTypes.oneOf(["success", "error", "info", "warning"]),
+};
 
-
-
-
+export default CustomAlert;

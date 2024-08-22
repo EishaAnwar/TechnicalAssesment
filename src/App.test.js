@@ -1,8 +1,10 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders BackgroundContainer and MainComponent', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  // Check if BackgroundContainer and MainComponent are rendered
+  expect(screen.getByTestId('background-container')).toBeInTheDocument();
+  expect(screen.getByTestId('main-component')).toBeInTheDocument();
 });

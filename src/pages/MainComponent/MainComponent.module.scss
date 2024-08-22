@@ -5,3 +5,9 @@
   flex-direction: column;
   padding: 60px 120px 40px 120px;
 }
+
+@media (max-width: 768px) {
+  .mainComponentContainer {
+    height: 100vh;
+  }
+}

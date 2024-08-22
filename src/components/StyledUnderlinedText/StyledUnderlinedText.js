@@ -1,6 +1,7 @@
 import React from "react";
 
 const StyledUnderlinedText = ({ text, textStyle, underlineColor }) => {
+  // Inline styles for the underline
   const underlineStyle = {
     position: "relative",
     width: "100%",
@@ -12,9 +13,12 @@ const StyledUnderlinedText = ({ text, textStyle, underlineColor }) => {
     transform: "rotate(-1.34deg)",
     transformOrigin: "left bottom",
   };
+
   return (
-    <div >
-      <div style={textStyle}>{text}</div>
+    <div>
+      {/* Display text with provided styling */}
+      <div className={textStyle}>{text}</div>
+      {/* Render the underline with dynamic color */}
       <div style={underlineStyle} />
     </div>
   );

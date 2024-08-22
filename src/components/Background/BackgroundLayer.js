@@ -3,13 +3,10 @@ import PropTypes from "prop-types";
 import BackgroundSplashPattern from "./BackgroundPattern";
 import styles from "./Background.module.scss";
 
-const BackgroundLayer = ({
-  topPosition = "1903px",
-  leftPosition = "-78px",
-  opacityPercentage = 100,
-}) => {
+const BackgroundLayer = ({ topPosition, leftPosition, opacityPercentage }) => {
   return (
-    <span >
+    <span className={styles.backgroundLayer} data-testid="background-layer">
+      {/* Render multiple splash patterns with varying positions and colors */}
       <BackgroundSplashPattern
         splashColor="#B9CEEA"
         topOffset={409}
@@ -44,7 +41,7 @@ const BackgroundLayer = ({
       />
       <BackgroundSplashPattern
         splashColor="#B9CEEA"
-        opacityPercentage={70}
+        opacityPercentage={70} // Custom opacity for this specific pattern
         topOffset={0}
         leftOffset={420}
         parentTop={topPosition}
@@ -58,6 +55,13 @@ BackgroundLayer.propTypes = {
   topPosition: PropTypes.string.isRequired,
   leftPosition: PropTypes.string.isRequired,
   opacityPercentage: PropTypes.number,
+};
+
+// Default props for BackgroundLayer
+BackgroundLayer.defaultProps = {
+  topPosition: "1903px",
+  leftPosition: "-78px",
+  opacityPercentage: 100,
 };
 
 export default BackgroundLayer;

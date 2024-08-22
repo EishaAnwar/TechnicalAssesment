@@ -27,6 +27,7 @@
   flex-direction: initial;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .partnersList {
   display: flex;
@@ -35,7 +36,28 @@
   justify-content: space-between;
 }
 
-.partnersList svg  path{
+.partnersList svg path {
   width: 8px;
   height: 16px;
+}
+
+.headerText {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 43.57px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+
+.arrow {
+  color: rgba(70, 176, 230, 1);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.disabledArrow {
+  color: lightgrey;
+  cursor: not-allowed;
 }

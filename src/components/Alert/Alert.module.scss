@@ -1,0 +1,78 @@
+.title {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 43.57px;
+  text-align: left;
+}
+
+.message {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  text-align: left;
+  color: rgba(81, 81, 81, 1);
+}
+
+.success {
+  color: rgba(5, 125, 33, 1);
+}
+
+.error {
+  color: #a94442;
+}
+
+.close{
+    display: flex;
+    justify-content: end;
+}
+
+.closeIcon{
+    cursor: pointer;
+
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.alertBox {
+  position: relative; /* Ensure the close button is positioned relative to the alert box */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0px 34px 44px -20px rgba(185, 206, 234, 0.25);
+  background: rgba(255, 255, 255, 1);
+  padding: 48px;
+  gap: 48px;
+  border-radius: 10px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.closeButton:focus {
+  outline: none;
+}

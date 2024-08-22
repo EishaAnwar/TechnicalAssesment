@@ -3,23 +3,26 @@ import PropTypes from "prop-types";
 import styles from "./Background.module.scss";
 
 const BackgroundSplashPattern = ({
-  parentTop = "1903px",
-  topOffset = 0,
-  parentLeft = "-78px",
-  leftOffset = 0,
-  opacityPercentage = 100,
-  splashColor = "#b9ceea",
+  parentTop = "1903px", //The top position of the parent element.
+  topOffset = 0, //The offset from the top position.
+  parentLeft = "-78px", //The left position of the parent element.
+  leftOffset = 0, //The offset from the left position.
+  opacityPercentage = 100, //The opacity of the splash pattern.
+  splashColor = "#b9ceea", //The color of the splash pattern.
 }) => {
-  const parentTopPostion = parseFloat(parentTop);
-  const parentLeftPostion = parseFloat(parentLeft);
+  // Calculate the actual top and left positions based on offsets and parent positions
+  const parentTopPosition = parseFloat(parentTop);
+  const parentLeftPosition = parseFloat(parentLeft);
   const childTop =
-    parentTopPostion > 0
-      ? `${parentTopPostion - topOffset}px`
-      : `${parentTopPostion + topOffset}px`;
+    parentTopPosition > 0
+      ? `${parentTopPosition - topOffset}px`
+      : `${parentTopPosition + topOffset}px`;
   const childLeft =
-    parentTopPostion > 0
-      ? `${parentLeftPostion + leftOffset}px`
-      : `${parentLeftPostion + leftOffset}px`;
+    parentLeftPosition > 0
+      ? `${parentLeftPosition + leftOffset}px`
+      : `${parentLeftPosition + leftOffset}px`;
+
+  // Define the splash pattern style
   const splashPatternStyle = {
     top: childTop,
     left: childLeft,
@@ -28,9 +31,7 @@ const BackgroundSplashPattern = ({
     position: "absolute",
   };
 
-  return (
-    <span style={splashPatternStyle} className={styles.splashPattern}/>
-  );
+  return <span style={splashPatternStyle} className={styles.splashPattern} data-testid="background-splash-pattern"/>;
 };
 
 BackgroundSplashPattern.propTypes = {
