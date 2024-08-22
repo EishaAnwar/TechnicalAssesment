@@ -36,13 +36,13 @@ const HeaderFooter = ({ type = "header" }) => {
   // Define menu options for header and footer
   const MenuOptionList = {
     header: [
-      { id: 1, label: "About us", link: "#aboutUs" },
+      { id: 1, label: "About us", link: "#top" },
       { id: 2, label: "Registration", link: "#registration" },
       { id: 3, label: "Careers", link: "#careers" },
     ],
     footer: [
       { id: 1, label: "FAQs", link: "#faqs" },
-      { id: 2, label: "Privacy Policy", link: "#privacy-policy" },
+      { id: 2, label: "Privacy Policy", link: "#privacyPolicy" },
       { id: 3, label: "Other", link: "#other" },
     ],
   };
@@ -59,7 +59,7 @@ const HeaderFooter = ({ type = "header" }) => {
             </li>
           ))}
         </ul>
-        <button className={styles.button}>Contact us</button>
+        <button className={styles.button} >Contact us</button>
       </nav>
     </div>
   );
